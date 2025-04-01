@@ -26,19 +26,14 @@ const Weatherday = styled.p`
     color: #000000;
 `;
 
-const WeatherInfo = () =>{
-    const weatherData = {
-        temperature: 27,
-        condition: "Ensolarado",
-        icon: "🌞",
-    };
+const WeatherInfo = ({ weatherData }) =>{
 
     return (
         <WeatherContainer>
-            <h1>{weatherData.icon}</h1>
-            <Weatherday>Domingo</Weatherday>
-            <Temperature>{weatherData.temperature} C°</Temperature>
-            <Condition>{weatherData.condition}</Condition>
+            <h1>🌤️</h1>
+            <Weatherday>Hoje</Weatherday>
+            <Temperature> {weatherData.main.temp} C°</Temperature>
+            <Condition> {weatherData.weather[0].description} </Condition>
         </WeatherContainer>
     );
 };

@@ -13,23 +13,17 @@ const DetailText = styled.p`
     font-size: 16px;
     margin: 5px 0;
     font-weight: bold;
-    color: #fff;
+    color: #000;
 `;
 
-const WeatherDetails = () => {
-    const details = {
-        wind: "12 km/h",
-        humidity: "68%",
-        rainChance: "10%",
-    };
-
-    return (
+const WeatherDetails = ( { weatherData }) => {
+    return(
         <DetailsContainer>
-            <DetailText>🍃 Ventos: {details.wind}</DetailText>
-            <DetailText>💧 Umidade: {details.humidity}</DetailText>
-            <DetailText>☔ Chance de Chuva: {details.rainChance}</DetailText>
+            <DetailText>🍃 Ventos: {weatherData.wind.speed} </DetailText>
+            <DetailText>💧 Umidade: {weatherData.main.humidity}</DetailText>
+            <DetailText>☔ Pressão: {weatherData.main.pressure}</DetailText>
         </DetailsContainer>
     );
-}
+};
 
 export default WeatherDetails;
