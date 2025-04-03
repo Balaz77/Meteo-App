@@ -30,7 +30,7 @@ const ForecastCards = () => {
 
     useEffect(() => {
         const fetchForecast = async () => {
-            const API_KEY = ""; //Coloque sua chave de API
+            const API_KEY = "35d57bd02732b3be1c8571e94e78cbe8"; 
             const CITY = "Brasília";
             const URL = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&appid=${API_KEY}&units=metric&lang=pt_br`;
         
